@@ -49,11 +49,6 @@ const MainPage = ({ navigation }) => {
             />
           </Card>
         ))}
-      {/* <FAB
-        style={{ position: "absolute", right: 16, bottom: 16 }}
-        icon="plus"
-        onPress={() => navigation.navigate("Form")}
-      /> */}
     </ScrollView>
   );
 };

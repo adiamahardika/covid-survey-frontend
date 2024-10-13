@@ -84,86 +84,8 @@ const DetailPage = ({ route, navigation }) => {
           </Button>
         </View>
       </Modal>
-      {/* <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => setModalVisible(false)}
-      >
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.modalText}>
-              Apakah anda yakin akan menghapus survey ini?
-            </Text>
-
-            <Pressable
-              style={[styles.button, styles.buttonDelete]}
-              onPress={handleDelete}
-            >
-              <Text style={styles.textStyle}>Yes, Delete</Text>
-            </Pressable>
-
-            <Pressable
-              style={[styles.button, styles.buttonCancel]}
-              onPress={() => setModalVisible(false)}
-            >
-              <Text style={styles.textStyle}>Cancel</Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal> */}
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 10,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: "center",
-  },
-  button: {
-    borderRadius: 5,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonDelete: {
-    backgroundColor: "#ff5c5c",
-    marginBottom: 10,
-  },
-  buttonCancel: {
-    backgroundColor: "#ccc",
-  },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-});
 
 export default DetailPage;
