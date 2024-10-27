@@ -20,6 +20,7 @@ const MainPage = ({ navigation }) => {
       .get(`${API_URL}/surveys`)
       .then((response) => {
         setSurveys(response.data);
+        console.log(response.data);
       })
       .catch((error) => console.log(error));
   };

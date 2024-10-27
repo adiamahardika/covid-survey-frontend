@@ -17,7 +17,10 @@ const DetailPage = ({ route, navigation }) => {
   useEffect(() => {
     axios
       .get(`${API_URL}/surveys/${id}`)
-      .then((response) => setSurvey(response.data))
+      .then((response) => {
+        setSurvey(response.data);
+        console.log(response);
+      })
       .catch((error) => console.log(error));
   }, []);
 

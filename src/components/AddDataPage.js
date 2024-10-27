@@ -17,7 +17,10 @@ const AddDataPage = ({ route, navigation }) => {
     if (id) {
       axios
         .get(`${API_URL}/surveys/${id}`)
-        .then((response) => setFormData(response.data))
+        .then((response) => {
+          setFormData(response.data);
+          console.log(response);
+        })
         .catch((error) => console.log(error));
     }
   }, [id]);
