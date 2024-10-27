@@ -16,7 +16,7 @@ Pastikan Anda telah menginstal perangkat lunak berikut:
 1. Clone repositori ini:
 
    ```sh
-   git clone <URL_REPOSITORY>
+   git clone https://github.com/adiamahardika/covid-survey-frontend.git
    cd covid-survey-frontend
    ```
 
