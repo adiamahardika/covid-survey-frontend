@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import * as Google from "expo-auth-session/providers/google";
 import * as WebBrowser from "expo-web-browser";
 import { GOOGLE_CLIENT_ID } from "@env"; // Pastikan Client ID Google berada di file .env
+import { Button, Text } from "react-native-paper";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -38,16 +39,26 @@ const AuthPage = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Covid Survey Login</Text>
+      <Image
+        source={require("../../assets/covid.jpg")}
+        style={{ height: 200 }}
+        resizeMode="contain"
+      />
+      <Text style={styles.title} variant="titleLarge">
+        Covid Survey App
+      </Text>
       <Button
+        mode="contained"
+        icon="login"
         disabled={!request}
-        title="Sign in with Google"
         onPress={() => promptAsync()}
-      />
-      <Button
-        onPress={() => navigation.navigate("Survey Covid")}
-        title="Skip Login"
-      />
+        style={{ marginBottom: 10 }}
+      >
+        Sign in with Google
+      </Button>
+      <Button onPress={() => navigation.navigate("Survey Covid")}>
+        Skip Login
+      </Button>
     </View>
   );
 };
@@ -58,9 +69,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
+    backgroundColor: "#fff",
   },
   title: {
-    fontSize: 24,
     marginBottom: 20,
   },
 });
