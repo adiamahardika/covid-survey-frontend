@@ -16,7 +16,7 @@ Pastikan Anda telah menginstal perangkat lunak berikut:
 1. Clone repositori ini:
 
    ```sh
-   git clone https://github.com/adiamahardika/covid-survey-frontend.git
+   git clone https://github.com/adiamahardika/covid-survey-frontend/tree/tk4
    cd covid-survey-frontend
    ```
 
@@ -24,11 +24,6 @@ Pastikan Anda telah menginstal perangkat lunak berikut:
 
    ```sh
    npm install
-   ```
-
-3. Buka file `.env` di direktori root proyek dan ganti URL API sesuai dengan ip address anda. Contoh:
-   ```env
-   API_URL=http://192.168.1.102:5000
    ```
 
 ## Menjalankan Proyek
